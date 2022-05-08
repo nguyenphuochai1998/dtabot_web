@@ -14,7 +14,7 @@ class NewsTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(minHeight: 150),
+      constraints: const BoxConstraints(minHeight: 150, maxHeight: 300),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -27,7 +27,8 @@ class NewsTag extends StatelessWidget {
                 topRight: Radius.circular(15.0)),
             child: Image.network(
               _urlImage,
-              fit: BoxFit.fitWidth,
+              fit: BoxFit.fill,
+              width: 300,
             ),
           ),
           Text(
