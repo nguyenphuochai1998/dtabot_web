@@ -11,6 +11,7 @@ dependencies:
   carousel_slider: ^4.1.1
   firebase_core: ^1.16.0
   cloud_firestore: ^3.1.14
+  getwidget: ^2.0.5
   flutter: 
     sdk: flutter
 
