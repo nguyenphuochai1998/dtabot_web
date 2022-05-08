@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../common/colors.dart';
+
 class NewsTag extends StatelessWidget {
   const NewsTag({Key? key, required String imageUrl, required String content})
       : _content = content,
@@ -14,26 +16,34 @@ class NewsTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(minHeight: 150, maxHeight: 300),
+      constraints: const BoxConstraints(maxHeight: 500, maxWidth: 300),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15.0)),
       ),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0)),
-            child: Image.network(
-              _urlImage,
-              fit: BoxFit.fill,
-              width: 300,
+          Container(
+            width: double.infinity,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15.0),
+                  topRight: Radius.circular(15.0)),
+              child: Image.network(
+                _urlImage,
+                fit: BoxFit.cover,
+                height: 200,
+              ),
             ),
           ),
-          Text(
-            _content,
-            style: const TextStyle(overflow: TextOverflow.ellipsis),
+          Expanded(
+            child: Text(
+              _content,
+              style: const TextStyle(
+                overflow: TextOverflow.ellipsis,
+              ),
+              maxLines: 4,
+            ),
           )
         ],
       ),

@@ -9,6 +9,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: 4.6.1
   carousel_slider: ^4.1.1
+  flutter_swiper: ^1.1.6
+  file_picker: ^4.5.1
+  excel: ^1.1.5
+  firebase_storage: ^10.2.15
+  url_launcher: ^6.1.0
   firebase_core: ^1.16.0
   cloud_firestore: ^3.1.14
   getwidget: ^2.0.5
