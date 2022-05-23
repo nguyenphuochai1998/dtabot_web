@@ -42,7 +42,7 @@ class AdminController extends GetxController {
         print(table); //sheet Name
         print(excel.tables[table]?.maxCols);
         print(excel.tables[table]?.maxRows);
-        if (excel.tables[table]?.maxCols != 10) {
+        if (excel.tables[table]?.maxCols != 12) {
           // lỗi format file
           return;
         }
@@ -62,7 +62,9 @@ class AdminController extends GetxController {
                 '"diem_thi_thpt":${row[6] is String ? '"${row[6]}"' : row[6]},'
                 '"to_hop_xet_tuyen_hoc_ba":${row[7] is String ? '"${row[7]}"' : row[7]},'
                 '"diem_hoc_ba":${row[8] is String ? '"${row[8]}"' : row[8]},'
-                '"hoc_phi":${row[9] is String ? '"${row[9]}"' : row[9]}'
+                '"hoc_phi":${row[9] is String ? '"${row[9]}"' : row[9]},'
+                '"link":${row[10] is String ? '"${row[10]}"' : row[10]},'
+                '"ghi_chu":${row[11] is String ? '"${row[11]}"' : row[11]}'
                 "}";
             dataJson.add(json);
           }

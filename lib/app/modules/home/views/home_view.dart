@@ -4,6 +4,7 @@ import 'package:captone2_dta_bot/app/widgets/menubar.dart';
 import 'package:captone2_dta_bot/app/widgets/newTag.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -77,6 +78,35 @@ class HomeView extends GetView<HomeController> {
                 );
               },
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 150),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/top.PNG'),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Container(
+                      width: 600,
+                      height: 300,
+                      child: Text(
+                        'Đào tạo, nghiên cứu gắn liền với khoa học và công nghệ nhằm tạo ra những sinh viên và học viên có lòng yêu nước,\n'
+                        'có phẩm chất nhân văn mang đậm bản sắc Việt Nam, có ý thức sinh hoạt động cộng đồng, có sức khỏe, có năng lực và\n'
+                        'kỹ năng toàn diện,tự tin, năng động, sáng tạo và trở thành công dân khởi nghiệp mang tính toàn cầu.',
+                        style: TextStyle(fontSize: 25),
+                      )),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Image.asset('assets/images/bottom.PNG'),
+                ],
+              ),
+            ),
+            Image.asset(
+              'assets/images/adv_top_rankingQS1-89.png',
+              fit: BoxFit.cover,
+            ),
             Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -140,6 +170,43 @@ class HomeView extends GetView<HomeController> {
                 )
               ],
             ),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Color(0xffeff0ef),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: "BAN TUYỂN SINH ĐẠI HỌC DUY TÂN\n",
+                      style: const TextStyle(
+                          fontSize: 14.0, color: Colors.black, height: 2),
+                      children: <TextSpan>[
+                        TextSpan(text: '254 Nguyễn Văn Linh - TP Đà Nẵng\n'),
+                        TextSpan(
+                            text: 'Email:',
+                            style:
+                                const TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: 'tuyensinh@duytan.edu.vn\n'),
+                        TextSpan(
+                            text: 'Điện thoại:',
+                            style:
+                                const TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '02363.650403 - 02363.653561\n'),
+                        TextSpan(
+                            text: 'Hotline:',
+                            style:
+                                const TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: '0905.294.390 - 0905.294.391 - 1900.2252'),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
           ]),
         ),
       );

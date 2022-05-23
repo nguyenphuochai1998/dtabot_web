@@ -17,6 +17,7 @@ dependencies:
   firebase_core: ^1.16.0
   cloud_firestore: ^3.1.14
   getwidget: ^2.0.5
+  d_chart: ^0.0.4
   flutter: 
     sdk: flutter
 

@@ -37,6 +37,8 @@ class NewsTag extends StatelessWidget {
             ),
           ),
           Expanded(
+              child: Padding(
+            padding: EdgeInsets.all(15),
             child: Text(
               _content,
               style: const TextStyle(
@@ -44,7 +46,7 @@ class NewsTag extends StatelessWidget {
               ),
               maxLines: 4,
             ),
-          )
+          ))
         ],
       ),
     );
